@@ -1,0 +1,88 @@
+.dropdow-header {
+    font-size: 17.5px !important;
+    .dropdow-box{
+        box-shadow: 0 10px 10px rgba(0,0,0,.5);
+        border: 1px solid hsla(0,0%,100%,.1);
+        border-radius: 12px;
+        color: #848895;
+    }
+    .title-header{
+        color: #848895;
+        font-size: 1rem;
+        width: max-content;
+
+    }
+    .content-dropdow{
+        // min-width: 200px;
+        width: max-content;
+    }
+    .nav-link.nav-link--secondary:hover {
+        border-color: hsla(0,0%,100%,.1);
+        background: #151118;
+        color:white !important;
+    }
+    .nav-link.nav-link--secondary{
+        border: 1px solid transparent;
+        padding: 0.5rem;
+        margin: 0.5rem -0.5rem;
+        border-radius: 8px;
+    }
+ 
+
+    .dropdown-menu[data-bs-popper] {
+        z-index: 101;
+        top: 100%;
+        left: -200%;
+    }
+    .network-content{
+        left: -400%  !important;
+        top:110% !important;
+    }
+    .build-content{
+            left: -386%  !important;
+            top:110% !important;
+        }
+        .comuinity-content{
+            left: -400% !important;
+            top:110% !important;
+        }
+    .nav-link--primary:before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        bottom: 5px;
+        left: 0;
+
+    }
+        .learn.nav-link--primary.show:before  {
+            background-color: rgb(25, 251, 155);
+        }
+   
+   
+        .build.nav-link--primary.show:before  {
+            background-color: rgb(255, 213, 18);
+        }
+        .network.nav-link--primary.show:before  {
+            background-color: rgb(153, 69, 255);
+        }
+        .comuinity.nav-link--primary.show:before  {
+            background-color: #f087ff;;
+        }
+        .divider{
+            background: hsla(0,0%,100%,.1);
+            height: inherit;
+            width:1px;
+        }
+.image-menu{
+    width: 168px;
+    height: 113px;
+    border-radius:6px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+}
