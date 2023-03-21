@@ -5,14 +5,14 @@ export function DropdowHeader() {
     <ul className="navbar-nav ms-auto">
       <li className="nav-item dropdown dropdow-header me-4 ">
         <a
-          className="learn nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
+          className="learn nav-link nav-link--primary font-size-title-header"
           href="#"
           id="navbarDropdown"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Learn
+          Partners
         </a>
         <div
           className="dropdown-menu dropdown-menu-dark bg-dark p-4 dropdow-box"
@@ -52,14 +52,14 @@ export function DropdowHeader() {
 
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
-          className="build nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
+          className="build nav-link nav-link--primary false font-size-title-header"
           href="#"
           id="navbarDropdown1"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Build
+          Solutions
         </a>
         <div
           className="dropdown-menu dropdown-menu-dark bg-dark p-4 dropdow-box build-content"
@@ -147,14 +147,15 @@ export function DropdowHeader() {
       </li>
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
-          className="network nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
+          className="network nav-link nav-link--primary false dropdown font-size-title-header"
+          // className="network nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
           href="#"
           id="navbarDropdown1"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Network
+          Work
         </a>
         <div
           className="dropdown-menu dropdown-menu-dark bg-dark p-4 dropdow-box network-content"
@@ -229,14 +230,14 @@ export function DropdowHeader() {
       </li>
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
-          className="comuinity nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
+          className="comuinity nav-link nav-link--primary font-size-title-header"
           href="#"
           id="navbarDropdown2"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Community
+          Careers
         </a>
         <div
           className="dropdown-menu dropdown-menu-dark bg-dark p-4 dropdow-box comuinity-content"

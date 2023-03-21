@@ -7,6 +7,18 @@
     padding-top: 190px;
     padding-bottom: 120px;
     }
+    .tab-content{
+        a{
+            color: white;
+            text-decoration: none;
+   font-weight: 500;
+    line-height: 1.2;
+        }
+        a:hover{
+            color: blue;
+        }
+    }
+ 
     .cover-one{    
         top: -19%;
         position: absolute;
@@ -94,13 +106,13 @@
     }
     .dot-text{
         position: relative;
-        line-height: 1!important;
+        line-height: 1.5!important;
         padding-left: 10px;
     }
     .dot-text:before {
         content: "";
         position: absolute;
-        top: 0;
+        top: 5px;
         left: 0;
         height: 5px;
         width: 5px;
@@ -198,12 +210,14 @@
             border-radius: 12px;
         }
         .wrap-image{
+            background-color: #ede0ff;
             position: relative;
             height: 100%;
             min-height: 400px;
             overflow: hidden;
             display: flex;
             img{
+                object-fit: contain !important;
                 position: absolute;
                 height: 100%;
                 width: 100%;

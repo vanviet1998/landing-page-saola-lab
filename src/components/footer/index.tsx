@@ -1,4 +1,5 @@
 import React from "react";
+import { logo } from "../../assets";
 import "./style.scss";
 export function Footer() {
   return (
@@ -9,26 +10,21 @@ export function Footer() {
             <div>
               <a className="navbar-brand" href="#">
                 <img
-                  src="https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdark-horizontal.e4df684f.svg&w=384&q=75"
+                  className="my-logo"
+                  src={logo}
                   alt=""
                   width="149"
                   height="22"
                 />
               </a>
             </div>
-            <p>Managed by Solana Foundation</p>
+            <p></p>
             <div className="solFooter">
-              <a className="navbar-brand" href="#">
-                <i className="bi bi-youtube"></i>
-              </a>
               <a className="navbar-brand" href="#">
                 <i className="bi bi-twitter"></i>
               </a>
               <a className="navbar-brand" href="#">
                 <i className="bi bi-discord"></i>
-              </a>
-              <a className="navbar-brand" href="#">
-                <i className="bi bi-reddit"></i>
               </a>
               <a className="navbar-brand" href="#">
                 <i className="bi bi-github"></i>
@@ -38,32 +34,27 @@ export function Footer() {
               </a>
             </div>
             <div className="d-none d-lg-block">
-              <span style={{ color: "#848895" }}>
-                © 2023 Solana Foundation. All rights reserved.
-              </span>
+              <span style={{ color: "#848895" }}>© 2023 Saola Labs.</span>
             </div>
           </div>
           <div>
             <div className="row my-6 my-md-0">
               <div className="col pe-lg-5">
                 <div className="h6 smaller text-uppercase text-nowrap">
-                  Solana
+                  SAOLA LABS
                 </div>
                 <ul className="list-unstyled m-0">
                   <li>
-                    <a href="">Grants</a>
+                    <a href="">Home</a>
                   </li>
                   <li>
-                    <a href="">Break Solana</a>
+                    <a href="">Partners</a>
                   </li>
                   <li>
-                    <a href="">Media Kit</a>
+                    <a href="">Solutions</a>
                   </li>
                   <li>
-                    <a href="">Careers</a>
-                  </li>
-                  <li>
-                    <a href="">Disclaimer</a>
+                    <a href="">About</a>
                   </li>
                 </ul>
               </div>
@@ -75,13 +66,13 @@ export function Footer() {
                     </div>
                     <ul className="list-unstyled m-0">
                       <li>
-                        <a href="">Ecosystem</a>
-                      </li>
-                      <li>
                         <a href="">Blog</a>
                       </li>
                       <li>
-                        <a href="">Newsletter</a>
+                        <a href="">Careers</a>
+                      </li>
+                      <li>
+                        <a href="">Contact</a>
                       </li>
                     </ul>
                   </div>

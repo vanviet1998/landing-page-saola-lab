@@ -1,4 +1,5 @@
 import React from "react";
+import { logo } from "../../assets";
 import { DropdowHeader } from "./dropdow-header";
 import "./style.scss";
 export function HeaderComponent() {
@@ -6,12 +7,7 @@ export function HeaderComponent() {
     <nav className="header navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img
-            src="https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdark-horizontal.e4df684f.svg&w=384&q=75"
-            alt=""
-            width="149"
-            height="22"
-          />
+          <img className="my-logo" src={logo} alt="" width="149" height="22" />
         </a>
         <button
           type="button"
