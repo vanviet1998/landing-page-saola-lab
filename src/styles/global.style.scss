@@ -98,6 +98,9 @@ $enable-negative-margins: true;
    object-fit: contain;
    transform: scale(1.5);
 }
+.my-p{
+   padding: 120px 0px;
+}
 /* CUSTOM WIDTHS */
 .w-10, .w-xs-10 { width: 10%!important; }
 .w-15, .w-xs-15 { width: 15%!important; }

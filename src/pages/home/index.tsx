@@ -231,7 +231,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="text-center">
-              <h2 className="text-title-two fw-normal mb-6 text-center">
+              <h2 className="text-title-two fw-normal mb-6 text-center pb-3">
                 TRUSTED BY WORLD-CLASS BLOCKCHAIN FOUNDATIONS, COMPANIES, AND
                 STARTUPS
               </h2>
@@ -309,7 +309,7 @@ export function HomePage() {
                       <h3 className="title color-piple">
                         Blockchain Consulting
                       </h3>
-                      <div className="small subdued">
+                      <div className="small subdued py-5">
                         With experience building tokenization and DeFi projects,
                         Saola provides technical consultation and go-to-market
                         plan for organizations of all sizes.
