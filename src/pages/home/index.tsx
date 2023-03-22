@@ -205,9 +205,9 @@ export function HomePage() {
               <div className="row">
                 <div className="col-md-7 mx-auto">
                   <p className="my-6 text-center">
-                    With experience building tokenization and DeFi projects,
-                    Saola provides technical consultation and go-to-market plan
-                    for organizations of all sizes.
+                    Saola is a blockchain labs with expertise in DeFi,
+                    Tokenization, Web3 Payment gives organizations an unfair
+                    advantage.
                   </p>
                 </div>
               </div>
