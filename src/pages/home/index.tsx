@@ -309,7 +309,7 @@ export function HomePage() {
                       <h3 className="title color-piple">
                         Blockchain Consulting
                       </h3>
-                      <div className="small subdued py-5">
+                      <div className="small subdued">
                         With experience building tokenization and DeFi projects,
                         Saola provides technical consultation and go-to-market
                         plan for organizations of all sizes.
