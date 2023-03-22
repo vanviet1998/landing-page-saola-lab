@@ -1,3 +1,4 @@
+$main-color:#E43D40;
 .app-main{
     .main-content{
         overflow: hidden;
@@ -15,7 +16,7 @@
     line-height: 1.2;
         }
         a:hover{
-            color: blue;
+            color: $main-color;
         }
     }
  
@@ -49,7 +50,7 @@
     .text-title-two{
     font-size: 1rem!important;
     letter-spacing: .05em!important;
-    color: #618adc;
+    color: $main-color;
     }
     .list-logo{
         max-width: 700px;
@@ -200,7 +201,7 @@
                     background: #222;
                 }
                 .active{
-                    border-color: #a962ff;
+                    border-color: $main-color;
 
                 }
             }
@@ -241,7 +242,7 @@
             }
         }
         a{
-            color: #a962ff;
+            color : $main-color;
             text-decoration: underline;
             text-underline-position: under;
         }
@@ -268,7 +269,7 @@
         }
     }
     .client-feedback{
-        padding: 125px 0px;
+        // padding: 125px 0px;
         .text-warning {
             color: #ffba08 !important;
         }
@@ -300,12 +301,16 @@
             }
         }
         .active{
-            border-color: #a962ff;
+            border-color: $main-color;
 
         }
         .wrap-person:hover{
             background-color: #222;
                 }
+    }
+    .near-footer{
+        background: linear-gradient(90deg, #8F305D 50%, #E43D40 50%);
+
     }
     @media (min-width: 1200px){
         .list-logo{

@@ -11,6 +11,7 @@ import {
   stableCoinImage,
   stablyImage,
   stablyLogo,
+  taro,
   tripple,
   valen,
   vechain,
@@ -49,6 +50,7 @@ export function HomePage() {
     realcoin,
     resolve,
     vechain,
+    taro,
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta.bbc99b74.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstepn.e6e296f7.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstripe.ae411f5c.svg&w=3840&q=75",
@@ -66,7 +68,7 @@ export function HomePage() {
         link: "https://www.stablecamel.com/ethereum",
       },
       support: [
-        "https://dune.com/docs/reference/images/dune-standard-logo.svg",
+        "https://dune.com/docs/reference/images/dune-standard-logo-dark.svg",
         "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg",
         "https://cryptologos.cc/logos/avalanche-avax-logo.png",
         "https://assets-global.website-files.com/6364e65656ab107e465325d2/637ea09ce69ec8d049fb871e_nt4Cn4mhAnXmPqN4XNw7P3C8w59Mi18UQsJr0Kv-OWU.svg",
@@ -151,7 +153,7 @@ export function HomePage() {
         link: "https://techcrunch.com/2021/05/25/affirm-spinout-resolve-raises-60m-for-its-b2b-buy-now-pay-later-platform/",
       },
       detail:
-        "Saola was able to quickly support our engineering team and were soon leading infrastructure projects end-to-end. Their team had strong knowledge of modern web development technologies and could easily handle both front-end and back-end implementations.",
+        "They were able to quickly support our engineering team and were soon leading infrastructure projects end-to-end. Their team had strong knowledge of modern web development technologies and could easily handle both front-end and back-end implementations.",
     },
     {
       name: "Julian Berridi",
@@ -249,10 +251,10 @@ export function HomePage() {
                     Solution
                     {/* <span className="d-none d-lg-block">mass adoption.</span> */}
                   </h2>
-                  <div className="smaller text-uppercase subdued specal-font dot-text">
+                  {/* <div className="smaller text-uppercase subdued specal-font dot-text">
                     We build the tools and technology for organizations to
                     accelerate the transition to Web3
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-lg-8">
@@ -315,23 +317,27 @@ export function HomePage() {
                       </div> */}
                     </div>
                   </div>
-                  {/* <div className="col-md-6 mb-2 mt-lg-n4">
+                  <div className="col-md-6 mb-2 mt-lg-n4">
                     <div className="p-5 card-custom">
-                      <h3 className="title color-yellow">Energy Efficient</h3>
+                      <h3 className="title color-yellow">
+                        Offshore Developer as a Service
+                      </h3>
                       <div className="small subdued">
-                        Solana’s proof of stake network and other innovations
-                        minimize its impact on the
-                        <a href="#"> environment</a>. Each Solana transaction
-                        uses about the same energy as a few Google searches.
+                        Save cost, build faster with our battle-tested
+                        Vietnam-based development team that has delivered
+                        projects for top-tier blockchain foundations and
+                        VC-backed startups.
+                        {/* <a href="#"> environment</a>. Each Solana transaction
+                        uses about the same energy as a few Google searches. */}
                       </div>
-                      <div className="mt-5">
+                      {/* <div className="mt-5">
                         <div className="h5 fw-normal">0%</div>
                         <div className="smaller text-uppercase subdued">
                           NET CARBON IMPACT
                         </div>
-                      </div>
+                      </div> */}
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
@@ -408,38 +414,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="py-5 position-relative">
-          <div className="container text-center py-5">
-            <div className="w-md-75 mx-auto ">
-              <img
-                style={{
-                  zIndex: -1,
-                  width: "100%",
-                  height: "100%",
-                  top: 0,
-                  right: 0,
-                }}
-                className="position-absolute"
-                src={bannerSecond}
-                alt=""
-                srcSet=""
-              />
-              <h2 className="h4 mb-4">
-                It is time to join the thousands of creators, artists, and
-                developers using Solana.
-              </h2>
-              <a
-                className="btn-custom-build me-2"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Start building
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="client-feedback bg-dark">
+        <div className="client-feedback bg-dark py-5">
           <div className="container">
             <h2 className="h4 mb-5">Who&apos;s Building With Saola Labs</h2>
             <div className="wrap">
@@ -498,6 +473,37 @@ export function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="near-footer py-5 position-relative">
+          <div className="container text-center py-5">
+            <div className="w-md-75 mx-auto ">
+              {/* <img
+                style={{
+                  zIndex: -1,
+                  width: "100%",
+                  height: "100%",
+                  top: 0,
+                  right: 0,
+                }}
+                className="position-absolute"
+                src={bannerSecond}
+                alt=""
+                srcSet=""
+              /> */}
+              <h2 className="h4 mb-4">
+                It is time to build the tools and technology, joining thousands
+                of others to accelerate the transition to web3.
+              </h2>
+              <a
+                className="btn-custom-build me-2"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start building
+              </a>
             </div>
           </div>
         </div>

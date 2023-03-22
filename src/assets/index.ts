@@ -13,3 +13,4 @@ export { default as stablyLogo } from "./images/stably-logo.png";
 export { default as realcoin } from "./images/realcoin.png";
 export { default as resolve } from "./images/resolve.png";
 export { default as vechain } from "./images/vechain.png";
+export { default as taro } from "./images/taro.png";
