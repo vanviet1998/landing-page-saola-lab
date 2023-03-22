@@ -9,7 +9,7 @@ export function DropdowHeader() {
           href="#"
           id="navbarDropdown"
           role="button"
-          data-bs-toggle="dropdown"
+          // data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           Partners
@@ -56,7 +56,7 @@ export function DropdowHeader() {
           href="#"
           id="navbarDropdown1"
           role="button"
-          data-bs-toggle="dropdown"
+          // data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           Solutions
@@ -152,7 +152,7 @@ export function DropdowHeader() {
           href="#"
           id="navbarDropdown1"
           role="button"
-          data-bs-toggle="dropdown"
+          // data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           Work
@@ -234,7 +234,7 @@ export function DropdowHeader() {
           href="#"
           id="navbarDropdown2"
           role="button"
-          data-bs-toggle="dropdown"
+          // data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           Careers
