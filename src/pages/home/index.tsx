@@ -272,9 +272,9 @@ export function HomePage() {
                         Decentralized Finance
                       </h3>
                       <div className="small subdued">
-                        Saola has developed a wide range of blockchain projects
-                        from trading and staking applications, lending
-                        protocols, price feed oracles, to web3 payment.
+                        Saola has developed a wide range of projects from
+                        trading and staking applications, lending protocols,
+                        price feed oracles, to web3 payment.
                       </div>
                       {/* <div className="mt-5">
                         <div className="h5 fw-normal beffore-text color-blue">
