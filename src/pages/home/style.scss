@@ -1,11 +1,14 @@
 $main-color:#E43D40;
 .app-main{
+    .main{
+        background-image: radial-gradient(farthest-side at top left, rgb(228 61 64 / 15%), transparent 900px), radial-gradient(farthest-corner at top right, rgb(143 48 93 / 27%), transparent 1000px);
+    }
     .main-content{
         overflow: hidden;
     }
     .wrap-main{
     position: relative;
-    padding-top: 190px;
+    padding-top: 120px;
     padding-bottom: 120px;
     }
     .tab-content{
@@ -80,6 +83,7 @@ $main-color:#E43D40;
         }
     }
     .news{
+         background-image: radial-gradient(farthest-side at right, #8f305d59, transparent 942px), radial-gradient(farthest-corner at bottom right, #8f305d21, transparent 1031px);
         position: relative;
         z-index: -2;
         overflow: hidden;
@@ -138,15 +142,15 @@ $main-color:#E43D40;
             padding-left: 10px;
         }
         .color-yellow{
-            border-color: #FFD512 !important;
+            border-color: #8F305D !important;
     
             }
         .color-blue{
-        border-color: #1FCFF1 !important;
+        border-color: #E43D40 !important;
 
         }
         .color-piple{
-            border-color:#9945FF !important;
+            border-color:#8F305D !important;
         }
         .color-blue:before{
             background: #1fcff1; 
@@ -180,7 +184,7 @@ $main-color:#E43D40;
             left: -10rem;
             top: 50%;
             margin-top: -20rem;
-            background: radial-gradient(50% 50% at 50% 50%,#a962ff 0,transparent 100%);
+            background: radial-gradient(50% 50% at 50% 50%, #C1374C 0, transparent 100%);
         }
         ul{
             list-style: none;
@@ -309,8 +313,9 @@ $main-color:#E43D40;
                 }
     }
     .near-footer{
-        background: linear-gradient(90deg, #8F305D 50%, #E43D40 50%);
-
+        
+       background: radial-gradient(50% 50% at 50% 50%, rgb(193 55 76 / 27%) 0, transparent 100%);
+    
     }
     @media (min-width: 1200px){
         .list-logo{

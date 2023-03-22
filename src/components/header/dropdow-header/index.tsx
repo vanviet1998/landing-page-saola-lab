@@ -155,7 +155,7 @@ export function DropdowHeader() {
           // data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Work
+          Projects
         </a>
         <div
           className="dropdown-menu dropdown-menu-dark bg-dark p-4 dropdow-box network-content"

@@ -6,7 +6,9 @@
         background-color: #000508;
         border: 1px solid #141414;
         border-radius: 12px 12px 0 0;
-        background-image: radial-gradient(farthest-side at bottom left,#271d3b,transparent 900px),radial-gradient(farthest-corner at bottom right,#3a233f,transparent 1000px);
+        background-image: radial-gradient(farthest-side at bottom left, rgba(228, 61, 64, 0.2705882353), transparent 900px), radial-gradient(farthest-corner at bottom right, rgba(143, 48, 93, 0.4196078431), transparent 1000px);
+    
+    
     }
     p{
         margin: 20px 0;

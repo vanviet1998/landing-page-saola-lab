@@ -43,7 +43,9 @@ $enable-negative-margins: true;
  .btn-custom-build{
     transition: box-shadow .25s ease,transform .25s ease;
     text-decoration: none;
-    background: linear-gradient(101.81deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
+            background: linear-gradient(90deg, #E43D40 10%, #8F305D 90%);
+
+   //  background: linear-gradient(101.81deg, rgb(240, 135, 255) -4.52%, rgb(110, 31, 206) 54.5%, rgba(110, 31, 206, 0.2) 101.41%);
     color: rgb(255, 255, 255);
     font-family: DSemi, monospace;
     font-weight: normal;

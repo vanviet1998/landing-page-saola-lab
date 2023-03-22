@@ -40,17 +40,18 @@ interface IPersonClient {
   };
   detail: string;
   role: string;
+  disable: boolean;
 }
 export function HomePage() {
   const listLogo = [
     valen,
     harmony,
     tripple,
-    stablyLogo,
-    realcoin,
-    resolve,
     vechain,
+    stablyLogo,
+    resolve,
     taro,
+    realcoin,
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeta.bbc99b74.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstepn.e6e296f7.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstripe.ae411f5c.svg&w=3840&q=75",
@@ -152,6 +153,7 @@ export function HomePage() {
           "“Affirm spinout Resolve raises $60M for its B2B 'buy now, pay later' platform.”",
         link: "https://techcrunch.com/2021/05/25/affirm-spinout-resolve-raises-60m-for-its-b2b-buy-now-pay-later-platform/",
       },
+      disable: false,
       detail:
         "They were able to quickly support our engineering team and were soon leading infrastructure projects end-to-end. Their team had strong knowledge of modern web development technologies and could easily handle both front-end and back-end implementations.",
     },
@@ -159,6 +161,7 @@ export function HomePage() {
       name: "Julian Berridi",
       avatar: julianImage,
       role: "Strategic Partnerships, Ripple",
+      disable: true,
       title: {
         title: "“Efficient and Innovative: Our Experience with Silicon.”",
         link: "#",
@@ -170,6 +173,7 @@ export function HomePage() {
       name: "Dominic Niolu",
       avatar: nioluImage,
       role: "Co-founder & CEO, Taro Finance",
+      disable: true,
       title: { title: "“Exceptional Service and Quality Results.”", link: "#" },
       detail:
         "In quas adipisci assumenda voluptas eveniet obcaecati est quis sapiente voluptatum iste porro blanditiis debitis ut beatae, fugit quidem fugiat eum molestias? Dolore magni harum officia tempore eos sapiente. Voluptatibus pariatur omnis libero unde quasi optio, tenetur reprehenderit tempore necessitatibus harum mollitia qui. Maxime, quas tempore. Sunt quaerat porro facere blanditiis voluptatibus.",
@@ -184,71 +188,74 @@ export function HomePage() {
     <div className="app-main">
       <HeaderComponent />
       <div className="main-content ">
-        <div className="container">
-          <div className="wrap-main">
-            <div className="cover-one bg-dark">
+        <div className="bg-dark main">
+          <div className="container">
+            <div className="wrap-main">
+              {/* <div className="cover-one bg-dark">
               <img src={bannerImage} />
-            </div>
-            <h1 className="h2 mb-4 text-center">
-              Blockchain technology
-              <br></br>
-              for the real world.
-            </h1>
-            <div className="cover-two bg-dark">
+            </div> */}
+              <h1 className="h2 mb-4 text-center">
+                Blockchain technology
+                <br></br>
+                for the real world.
+              </h1>
+              {/* <div className="cover-two bg-dark">
               <img src={bannerImage} />
-            </div>
-            <div className="row">
-              <div className="col-md-7 mx-auto">
-                <p className="my-6 text-center">
-                  Saola is a blockchain labs with technical expertise in
-                  Decentralized Finance and Tokenization gives organizations an
-                  unfair advantage.
-                </p>
+            </div> */}
+              <div className="row">
+                <div className="col-md-7 mx-auto">
+                  <p className="my-6 text-center">
+                    With experience building tokenization and DeFi projects,
+                    Saola provides technical consultation and go-to-market plan
+                    for organizations of all sizes.
+                  </p>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a
+                  className="btn-custom-build me-2"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Start building
+                </a>
+                <a
+                  className="btn-custom-read"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Our partner
+                </a>
               </div>
             </div>
-            <div className="d-flex justify-content-center">
-              <a
-                className="btn-custom-build me-2"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Start building
-              </a>
-              <a
-                className="btn-custom-read"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Our partner
-              </a>
-            </div>
-          </div>
-          <div className="text-center">
-            <h2 className="text-title-two fw-normal mb-6 text-center">
-              TRUSTED BY WORLD-CLASS BLOCKCHAIN FOUNDATIONS, COMPANIES, AND
-              STARTUPS
-            </h2>
-            <div className="list-logo text-center">
-              {listLogo.map((logo, index) => (
-                <div key={index} className="logo-item">
-                  <img src={logo} />
-                </div>
-              ))}
+            <div className="text-center">
+              <h2 className="text-title-two fw-normal mb-6 text-center">
+                TRUSTED BY WORLD-CLASS BLOCKCHAIN FOUNDATIONS, COMPANIES, AND
+                STARTUPS
+              </h2>
+              <div className="list-logo text-center">
+                {listLogo.map((logo, index) => (
+                  <div key={index} className="logo-item">
+                    <img src={logo} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+
         <div className="news bg-dark">
-          <div className="cover-new">
+          {/* <div className="cover-new">
             <img src={bannerSecond} />
-          </div>
+          </div> */}
           <div className="container">
             <div className="row pt-9 mt-9">
               <div className="col-lg-4">
                 <div className="mb-8 mb-lg-0">
                   <h2 className="h4">
-                    Solution
+                    Solutions
                     {/* <span className="d-none d-lg-block">mass adoption.</span> */}
                   </h2>
                   {/* <div className="smaller text-uppercase subdued specal-font dot-text">
@@ -265,9 +272,9 @@ export function HomePage() {
                         Decentralized Finance
                       </h3>
                       <div className="small subdued">
-                        Saola has experience building full-stack DeFi products
-                        from trading and staking applications, lending &
-                        borrowing protocols, to price feed oracles.
+                        Saola has developed a wide range of blockchain projects
+                        from trading and staking applications, lending
+                        protocols, price feed oracles, to web3 payment.
                       </div>
                       {/* <div className="mt-5">
                         <div className="h5 fw-normal beffore-text color-blue">
@@ -303,9 +310,9 @@ export function HomePage() {
                         Blockchain Consulting
                       </h3>
                       <div className="small subdued">
-                        With expertise in blockchain development and quant
-                        research, Saola provides consultation and tech solutions
-                        for organizations of all sizes.
+                        With experience building tokenization and DeFi projects,
+                        Saola provides technical consultation and go-to-market
+                        plan for organizations of all sizes.
                       </div>
                       {/* <div className="mt-5">
                         <div className="h5 fw-normal beffore-text color-blue">
@@ -319,9 +326,7 @@ export function HomePage() {
                   </div>
                   <div className="col-md-6 mb-2 mt-lg-n4">
                     <div className="p-5 card-custom">
-                      <h3 className="title color-yellow">
-                        Offshore Developer as a Service
-                      </h3>
+                      <h3 className="title color-blue">Offshore Development</h3>
                       <div className="small subdued">
                         Save cost, build faster with our battle-tested
                         Vietnam-based development team that has delivered
@@ -348,7 +353,7 @@ export function HomePage() {
             <div className="container position-relative">
               <div className="bg-wrap"></div>
               <div className="d-flex mb-5 flex-column flex-lg-row justify-content-between align-items-lg-center">
-                <h2 className="h4 mb-0">Build for growth.</h2>
+                <h2 className="h4 mb-0">Projects</h2>
                 <ul>
                   {detailCoinList.map((coin, index) => (
                     <li key={index} className="mt-2 mt-md-0">
@@ -425,6 +430,7 @@ export function HomePage() {
                       <div key={index} className="mb-3">
                         <div
                           onClick={() => {
+                            if (person.disable) return;
                             setPersonClient(person);
                           }}
                           className={`${
@@ -476,7 +482,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="near-footer py-5 position-relative">
+        <div className="near-footer py-5 position-relative bg-dark">
           <div className="container text-center py-5">
             <div className="w-md-75 mx-auto ">
               {/* <img
@@ -493,8 +499,9 @@ export function HomePage() {
                 srcSet=""
               /> */}
               <h2 className="h4 mb-4">
-                It is time to build the tools and technology, joining thousands
-                of others to accelerate the transition to web3.
+                Join thousands of other builders to
+                <br></br>
+                accelerate the transition to web3.
               </h2>
               <a
                 className="btn-custom-build me-2"
