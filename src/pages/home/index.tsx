@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import { left } from "@popperjs/core";
+import React, { useRef, useState } from "react";
 import {
   bannerImage,
+  bannerReal,
   bannerSecond,
+  bitCoin,
+  bitcoinn,
   brianImage,
+  cfiIcon,
+  coverValen,
   harmony,
   julianImage,
+  ltImage,
   nioluImage,
+  qredo,
   realcoin,
   resolve,
+  rsmReal,
   stableCoinImage,
   stablyImage,
   stablyLogo,
   taro,
   tripple,
   valen,
+  valenBanner,
   vechain,
+  zReal,
 } from "../../assets";
 import { Footer } from "../../components/footer";
 import { HeaderComponent } from "../../components/header";
@@ -28,8 +39,10 @@ interface IDetailCoin {
     link: string;
   };
   icon: string;
-  support: string[];
+  support?: { link: string; tag?: boolean }[];
   disable: boolean;
+  colorBanner?: string;
+  styleBanner?: any;
 }
 interface IPersonClient {
   name: string;
@@ -56,7 +69,7 @@ export function HomePage() {
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstepn.e6e296f7.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstripe.ae411f5c.svg&w=3840&q=75",
   ];
-  const listCoin = ["Analytics", "DeFi", "Tokenization", "Oracle", "DAO"];
+  const listCoin = ["Analytics", "CeFi", "Tokenization", "DeFi", "Oracle"];
   const detailCoinList: IDetailCoin[] = [
     {
       key: "Analytics",
@@ -69,42 +82,72 @@ export function HomePage() {
         link: "https://www.stablecamel.com/ethereum",
       },
       support: [
-        "https://dune.com/docs/reference/images/dune-standard-logo-dark.svg",
-        "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg",
-        "https://cryptologos.cc/logos/avalanche-avax-logo.png",
-        "https://assets-global.website-files.com/6364e65656ab107e465325d2/637ea09ce69ec8d049fb871e_nt4Cn4mhAnXmPqN4XNw7P3C8w59Mi18UQsJr0Kv-OWU.svg",
+        {
+          link: "https://dune.com/docs/reference/images/dune-standard-logo-dark.svg",
+        },
+        { link: "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg" },
+        { link: "https://cryptologos.cc/logos/avalanche-avax-logo.png" },
+        {
+          link: "https://assets-global.website-files.com/6364e65656ab107e465325d2/637ea09ce69ec8d049fb871e_nt4Cn4mhAnXmPqN4XNw7P3C8w59Mi18UQsJr0Kv-OWU.svg",
+        },
       ],
       disable: false,
+      colorBanner: "#ede0ff",
+    },
+    {
+      key: "CeFi",
+      banner: valenBanner,
+      icon: cfiIcon,
+      title:
+        "Saola was engaged to develop a crypto exchange module for Valens Pay, a licensed neo banking platform serving North America and EU markets.",
+      link: {
+        title: "Learn more about Valens Exchange",
+        link: "https://valens-exchange.com/tradez",
+      },
+      disable: false,
+      colorBanner: coverValen,
+      styleBanner: {
+        height: "unset",
+        width: "unset",
+        top: "50%",
+        left: " 29%",
+        background: "white",
+        transform: "scale(1.5)",
+      },
+      support: [
+        { link: qredo },
+        { link: ltImage },
+        { link: bitcoinn },
+        { link: "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg" },
+      ],
+    },
+    {
+      key: "Tokenization",
+      banner: bannerReal,
+      icon: realcoin,
+      title:
+        "Realcoin is a real estate tokenization platform on Binance Smart Chain, allowing user to invest in fractional real estate to earn yield from qualified projects.",
+      link: {
+        title: "Learn more about Realcoin",
+        link: "https://realcoin-wui.vercel.app/vi",
+      },
+      support: [
+        { link: bitCoin },
+        { link: zReal },
+        { link: rsmReal },
+        { link: "CT Group", tag: true },
+      ],
+      disable: false,
+      colorBanner: "#243767",
     },
     {
       key: "DeFi",
       banner:
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fopenbook.dfa6fbbc.jpg&w=3840&q=75",
-      icon: "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fopenbook.427f608b.svg&w=3840&q=75",
+        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.970c07cd.jpg&w=3840&q=75",
+      icon: "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.2cc1bea0.svg&w=3840&q=75",
       title:
-        "The Solana community came together to build an open-source order book which can power decentralized finance for everyone.",
-      link: { title: "Learn more about DeFi on Solana", link: "#" },
-      support: [
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsolend.0a0cf7b0.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fjupiter.4735a644.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fkamino.387b783e.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Forca.f65c6e42.svg&w=256&q=75",
-      ],
-      disable: true,
-    },
-    {
-      key: "Tokenization",
-      banner:
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fasics.67a8cfcf.jpg&w=3840&q=75",
-      icon: "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fasics.a0e6ca82.svg&w=3840&q=75",
-      title:
-        "ASICS accepted pre-orders for the Solana-inspired UI collection using a frictionless, permissionless payment system powered by Solana Pay.",
-      link: { title: "Learn more about Payments on Solana", link: "#" },
-      support: [
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdecaf.9bcaeef9.png&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhelio.4eef08a9.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftiplink.7a4d1c7b.svg&w=256&q=75",
-      ],
+        "A decentralized organization made up of NFT holders, MonkeDAO has already started running a validator node to support the Solana network — and has big plans for the future.",
+      link: { title: "Learn more about DAOs on Solana", link: "#" },
       disable: true,
     },
     {
@@ -115,30 +158,6 @@ export function HomePage() {
       title:
         "Play and own. Bladerite, a free-to-play melee battle royale game, uses Solana to power its in-game item ownership system.",
       link: { title: "Learn more about Gaming on Solana", link: "#" },
-      support: [
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbr1.580afdd0.png&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fminiroyale.136e595e.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstaratlas.9a8b34a7.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faurory.942c2492.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmatchday.437d068a.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fseedlabs.aebb3ca3.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgenopets.825f99bf.svg&w=256&q=75",
-      ],
-      disable: true,
-    },
-    {
-      key: "DAO",
-      banner:
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.970c07cd.jpg&w=3840&q=75",
-      icon: "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.2cc1bea0.svg&w=3840&q=75",
-      title:
-        "A decentralized organization made up of NFT holders, MonkeDAO has already started running a validator node to support the Solana network — and has big plans for the future.",
-      link: { title: "Learn more about DAOs on Solana", link: "#" },
-      support: [
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgrape.67c128f2.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnation.38d16983.svg&w=256&q=75",
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frealms.9362c02c.svg&w=256&q=75",
-      ],
       disable: true,
     },
   ];
@@ -184,6 +203,11 @@ export function HomePage() {
   );
   const [activeBtnCoin, setActiveBtnCoin] = useState<string>(listCoin[0]);
   const [_detailCoin, setDetailCoin] = useState<IDetailCoin>(detailCoinList[0]);
+
+  const solutionRef = useRef<HTMLDivElement>(null);
+  const handleClickSolution = () => {
+    // solutionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="app-main">
       <div className="opacity-custom"></div>
@@ -214,8 +238,8 @@ export function HomePage() {
               </div>
               <div className="d-flex justify-content-center">
                 <a
+                  onClick={handleClickSolution}
                   className="btn-custom-build me-2"
-                  href="http://"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -227,7 +251,7 @@ export function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Our partner
+                  GET IN TOUCH
                 </a>
               </div>
             </div>
@@ -254,7 +278,7 @@ export function HomePage() {
           <div className="container">
             <div className="row pt-9 mt-9">
               <div className="col-lg-4">
-                <div className="mb-8 mb-lg-0">
+                <div ref={solutionRef} className="mb-8 mb-lg-0">
                   <h2 className="h4">
                     Solutions
                     {/* <span className="d-none d-lg-block">mass adoption.</span> */}
@@ -384,8 +408,32 @@ export function HomePage() {
                 >
                   <div className="d-flex flex-column-reverse flex-md-row overflow-hidden box-wrap">
                     <div className="w-md-50">
-                      <div className="wrap-image">
-                        <img src={detail.banner} alt="" srcSet="" />
+                      <div
+                        style={{
+                          background: `${
+                            detail.colorBanner ? detail.colorBanner : "black"
+                          }`,
+                          backgroundImage: `url${detail.colorBanner}`,
+                        }}
+                        className="wrap-image"
+                      >
+                        {detail.key === "CeFi" && (
+                          <img
+                            style={{
+                              position: "absolute",
+                              width: "100%",
+                              height: "100%",
+                              transform: "scale(1.5)",
+                            }}
+                            src={detail.colorBanner}
+                          />
+                        )}
+                        <img
+                          style={detail.styleBanner}
+                          src={detail.banner}
+                          alt=""
+                          srcSet=""
+                        />
                       </div>
                     </div>
                     <div className="w-md-50 p-5 d-flex flex-column justify-content-center">
@@ -405,13 +453,17 @@ export function HomePage() {
                     </div>
                   </div>
                   <div style={{ overflow: "auto" }} className="d-flex box-logo">
-                    {detail.support.map((image, index) => (
+                    {(detail?.support || []).map((image, index) => (
                       <div key={index} className="wrap-logo">
-                        <img
-                          style={{ objectFit: "contain" }}
-                          src={image}
-                          alt=""
-                        />
+                        {image.tag ? (
+                          <div className="tag">{image.link}</div>
+                        ) : (
+                          <img
+                            style={{ objectFit: "contain" }}
+                            src={image.link}
+                            alt=""
+                          />
+                        )}
                       </div>
                     ))}
                   </div>
