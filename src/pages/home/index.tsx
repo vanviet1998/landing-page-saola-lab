@@ -186,6 +186,7 @@ export function HomePage() {
   const [_detailCoin, setDetailCoin] = useState<IDetailCoin>(detailCoinList[0]);
   return (
     <div className="app-main">
+      <div className="opacity-custom"></div>
       <HeaderComponent />
       <div className="main-content ">
         <div className="bg-dark main">

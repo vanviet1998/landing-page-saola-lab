@@ -1,7 +1,7 @@
 $main-color:#E43D40;
 .app-main{
     .main{
-        background-image: radial-gradient(farthest-side at top left, rgb(228 61 64 / 15%), transparent 900px), radial-gradient(farthest-corner at top right, rgb(143 48 93 / 27%), transparent 1000px);
+        // background-image: radial-gradient(farthest-side at top left, rgb(228 61 64 / 15%), transparent 900px), radial-gradient(farthest-corner at top right, rgb(143 48 93 / 27%), transparent 1000px);
     }
     .main-content{
         overflow: hidden;
@@ -83,7 +83,7 @@ $main-color:#E43D40;
         }
     }
     .news{
-         background-image: radial-gradient(farthest-side at right, #8f305d59, transparent 942px), radial-gradient(farthest-corner at bottom right, #8f305d21, transparent 1031px);
+        //  background-image: radial-gradient(farthest-side at right, #8f305d59, transparent 942px), radial-gradient(farthest-corner at bottom right, #8f305d21, transparent 1031px);
         position: relative;
         z-index: -2;
         overflow: hidden;
@@ -184,7 +184,7 @@ $main-color:#E43D40;
             left: -10rem;
             top: 50%;
             margin-top: -20rem;
-            background: radial-gradient(50% 50% at 50% 50%, #C1374C 0, transparent 100%);
+            // background: radial-gradient(50% 50% at 50% 50%, #C1374C 0, transparent 100%);
         }
         ul{
             list-style: none;
@@ -314,7 +314,7 @@ $main-color:#E43D40;
     }
     .near-footer{
         
-       background: radial-gradient(50% 50% at 50% 50%, rgb(193 55 76 / 27%) 0, transparent 100%);
+    //    background: radial-gradient(50% 50% at 50% 50%, rgb(193 55 76 / 27%) 0, transparent 100%);
     
     }
     @media (min-width: 1200px){
