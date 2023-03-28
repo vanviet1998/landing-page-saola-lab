@@ -27,8 +27,9 @@ import {
   vechain,
   zReal,
 } from "../../assets";
+import { EVENT_HEADER } from "../../common";
 import { Footer } from "../../components/footer";
-import { HeaderComponent } from "../../components/header";
+import { HeaderComponent, IHeaderProps } from "../../components/header";
 import "./style.scss";
 interface IDetailCoin {
   key: string;
@@ -205,13 +206,31 @@ export function HomePage() {
   const [_detailCoin, setDetailCoin] = useState<IDetailCoin>(detailCoinList[0]);
 
   const solutionRef = useRef<HTMLDivElement>(null);
-  const handleClickSolution = () => {
-    // solutionRef.current.scrollIntoView({ behavior: "smooth" });
+  const partnerRef = useRef<HTMLDivElement>(null);
+
+  const projectRef = useRef<HTMLDivElement>(null);
+
+  const carerRef = useRef<HTMLDivElement>(null);
+  const onClick = (eventHeader: EVENT_HEADER) => {
+    switch (eventHeader) {
+      case EVENT_HEADER.SOLUTION:
+        solutionRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case EVENT_HEADER.CAREERS:
+        carerRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case EVENT_HEADER.PROJECTS:
+        projectRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case EVENT_HEADER.PARTNER:
+        partnerRef.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+    }
   };
   return (
     <div className="app-main">
       <div className="opacity-custom"></div>
-      <HeaderComponent />
+      <HeaderComponent onClick={(props) => onClick(props)} />
       <div className="main-content ">
         <div className="bg-dark main">
           <div className="container">
@@ -238,7 +257,6 @@ export function HomePage() {
               </div>
               <div className="d-flex justify-content-center">
                 <a
-                  onClick={handleClickSolution}
                   className="btn-custom-build me-2"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -271,14 +289,14 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="news bg-dark">
+        <div ref={solutionRef} className="news bg-dark">
           {/* <div className="cover-new">
             <img src={bannerSecond} />
           </div> */}
           <div className="container">
             <div className="row pt-9 mt-9">
               <div className="col-lg-4">
-                <div ref={solutionRef} className="mb-8 mb-lg-0">
+                <div className="mb-8 mb-lg-0">
                   <h2 className="h4">
                     Solutions
                     {/* <span className="d-none d-lg-block">mass adoption.</span> */}
@@ -373,7 +391,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="detail-coin bg-dark">
+        <div ref={projectRef} className="detail-coin bg-dark">
           <div className="flag">
             <div className="container position-relative">
               <div className="bg-wrap"></div>
@@ -472,7 +490,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="client-feedback bg-dark py-5">
+        <div ref={partnerRef} className="client-feedback bg-dark py-5">
           <div className="container">
             <h2 className="h4 mb-5">Who&apos;s Building With Saola Labs</h2>
             <div className="wrap">
@@ -535,7 +553,10 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div className="near-footer py-5 position-relative bg-dark">
+        <div
+          ref={carerRef}
+          className="near-footer py-5 position-relative bg-dark"
+        >
           <div className="container text-center py-5">
             <div className="w-md-75 mx-auto ">
               {/* <img

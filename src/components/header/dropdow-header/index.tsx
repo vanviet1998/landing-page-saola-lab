@@ -1,12 +1,14 @@
 import React from "react";
+import { IHeaderProps } from "..";
+import { EVENT_HEADER } from "../../../common";
 import "./style.scss";
-export function DropdowHeader() {
+export function DropdowHeader(props: IHeaderProps) {
   return (
     <ul className="navbar-nav ms-auto">
       <li className="nav-item dropdown dropdow-header me-4 ">
         <a
+          onClick={() => props.onClick(EVENT_HEADER.PARTNER)}
           className="learn nav-link nav-link--primary font-size-title-header"
-          href="#"
           id="navbarDropdown"
           role="button"
           // data-bs-toggle="dropdown"
@@ -52,8 +54,8 @@ export function DropdowHeader() {
 
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
+          onClick={() => props.onClick(EVENT_HEADER.SOLUTION)}
           className="build nav-link nav-link--primary false font-size-title-header"
-          href="#"
           id="navbarDropdown1"
           role="button"
           // data-bs-toggle="dropdown"
@@ -147,9 +149,9 @@ export function DropdowHeader() {
       </li>
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
+          onClick={() => props.onClick(EVENT_HEADER.PROJECTS)}
           className="network nav-link nav-link--primary false dropdown font-size-title-header"
           // className="network nav-link nav-link--primary dropdown-toggle false dropdown-toggle font-size-title-header"
-          href="#"
           id="navbarDropdown1"
           role="button"
           // data-bs-toggle="dropdown"
@@ -230,8 +232,8 @@ export function DropdowHeader() {
       </li>
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
+          onClick={() => props.onClick(EVENT_HEADER.CAREERS)}
           className="comuinity nav-link nav-link--primary font-size-title-header"
-          href="#"
           id="navbarDropdown2"
           role="button"
           // data-bs-toggle="dropdown"

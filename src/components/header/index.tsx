@@ -1,8 +1,12 @@
 import React from "react";
 import { logo } from "../../assets";
+import { EVENT_HEADER } from "../../common";
 import { DropdowHeader } from "./dropdow-header";
 import "./style.scss";
-export function HeaderComponent() {
+export interface IHeaderProps {
+  onClick: (eventHeader: EVENT_HEADER) => void;
+}
+export function HeaderComponent(props: IHeaderProps) {
   return (
     <nav className="header navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -18,7 +22,7 @@ export function HeaderComponent() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
-          <DropdowHeader />
+          <DropdowHeader {...props} />
         </div>
       </div>
     </nav>
