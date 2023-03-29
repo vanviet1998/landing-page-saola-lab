@@ -50,6 +50,7 @@ interface IDetailCoin {
   colorBanner?: string;
   styleBanner?: any;
   styleCoverBanner?: any;
+  styleIcon?: any;
 }
 interface IPersonClient {
   name: string;
@@ -103,27 +104,31 @@ export function HomePage() {
     },
     {
       key: "Exchange",
-      banner: valenBanner,
+      banner: coverValen,
       icon: cfiIcon,
       title:
         "Saola was engaged in developing crypto exchange functionality for Valens Pay, a FINTRAC-registered MSB fintech platform.",
       link: {
         title: "Learn more about Valens Exchange",
-        link: "https://valens-exchange.com/tradez",
+        link: "https://valens-exchange.com/trade/",
       },
       disable: false,
       colorBanner: coverValen,
       styleCoverBanner: {
-        backgroundImage: `url(${coverValen})`,
+        background: "black",
       },
-      styleBanner: {
-        height: "unset",
-        width: "unset",
-        top: "50%",
-        left: " 25%",
+      styleIcon: {
         background: "white",
-        transform: "scale(1.5)",
+        padding: "10px",
       },
+      // styleBanner: {
+      //   height: "unset",
+      //   width: "unset",
+      //   top: "50%",
+      //   left: " 25%",
+      //   background: "white",
+      //   transform: "scale(1.5)",
+      // },
       support: [
         { link: qredo },
         { link: ltImage },
@@ -173,7 +178,12 @@ export function HomePage() {
         },
       ],
       styleCoverBanner: {
-        backgroundColor: "black",
+        backgroundColor: "#19263E",
+      },
+      styleIcon: {
+        background: "white",
+        width: "auto",
+        padding: "6px",
       },
     },
     {
@@ -284,7 +294,7 @@ export function HomePage() {
                   <p className="my-6 text-center">
                     Saola is a blockchain development firm with expertise in
                     DeFi and Tokenization, providing partners an unfair
-                    advantage
+                    advantage.
                   </p>
                 </div>
               </div>
@@ -495,7 +505,12 @@ export function HomePage() {
                     <div className="w-md-50 p-5 d-flex flex-column justify-content-center">
                       <div className="h4 mb-5">
                         <div className="h4__wrap-image">
-                          <img src={detail.icon} alt="" srcSet="" />
+                          <img
+                            style={{ ...detail.styleIcon }}
+                            src={detail.icon}
+                            alt=""
+                            srcSet=""
+                          />
                         </div>
                       </div>
                       <p>{detail.title}</p>

@@ -38,7 +38,7 @@ export function Footer() {
                 © 2023 Saola Labs. Built in Saigon with
               </span>
               <img
-                style={{ width: 29, height: 29, marginLeft: 4 }}
+                style={{ width: 20, height: 20, marginLeft: 4 }}
                 src={coffeImage}
               />
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
               © 2023 Saola Labs. Built in Saigon with
             </span>
             <img
-              style={{ width: 29, height: 29, marginLeft: 4 }}
+              style={{ width: 20, height: 20, marginLeft: 4 }}
               src={coffeImage}
             />
           </div>
