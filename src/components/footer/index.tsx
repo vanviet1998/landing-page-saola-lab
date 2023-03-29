@@ -1,5 +1,5 @@
 import React from "react";
-import { logo } from "../../assets";
+import { coffeImage, logo } from "../../assets";
 import "./style.scss";
 export function Footer() {
   return (
@@ -34,7 +34,13 @@ export function Footer() {
               </a>
             </div>
             <div className="d-none d-lg-block">
-              <span style={{ color: "#848895" }}>© 2023 Saola Labs.</span>
+              <span style={{ color: "#848895" }}>
+                © 2023 Saola Labs. Built in Saigon with
+              </span>
+              <img
+                style={{ width: 29, height: 29, marginLeft: 4 }}
+                src={coffeImage}
+              />
             </div>
           </div>
           <div>
@@ -84,8 +90,12 @@ export function Footer() {
             <div className="my-6 driver"> </div>
 
             <span className="solFooter" style={{ color: "#848895" }}>
-              © 2023 Solana Foundation. All rights reserved.
+              © 2023 Saola Labs. Built in Saigon with
             </span>
+            <img
+              style={{ width: 29, height: 29, marginLeft: 4 }}
+              src={coffeImage}
+            />
           </div>
         </div>
       </div>

@@ -232,12 +232,14 @@ export function DropdowHeader(props: IHeaderProps) {
       </li>
       <li className="build-header nav-item dropdown dropdow-header  me-4">
         <a
-          onClick={() => props.onClick(EVENT_HEADER.CAREERS)}
           className="comuinity nav-link nav-link--primary font-size-title-header"
           id="navbarDropdown2"
           role="button"
           // data-bs-toggle="dropdown"
           aria-expanded="false"
+          target={"_blank"}
+          href="https://go-hub.notion.site/Blockchain-Engineer-Solidity-NodeJS-c6574895cc0442228b402b4a8c02f5fb"
+          rel="noreferrer"
         >
           Careers
         </a>

@@ -1,6 +1,8 @@
 import { left } from "@popperjs/core";
 import React, { useRef, useState } from "react";
 import {
+  alpaca,
+  alpacaCover,
   bannerImage,
   bannerReal,
   bannerSecond,
@@ -20,11 +22,14 @@ import {
   stableCoinImage,
   stablyImage,
   stablyLogo,
+  sunImage,
+  sunsunImage,
   taro,
   tripple,
   valen,
   valenBanner,
   vechain,
+  watter,
   zReal,
 } from "../../assets";
 import { EVENT_HEADER } from "../../common";
@@ -44,6 +49,7 @@ interface IDetailCoin {
   disable: boolean;
   colorBanner?: string;
   styleBanner?: any;
+  styleCoverBanner?: any;
 }
 interface IPersonClient {
   name: string;
@@ -70,7 +76,7 @@ export function HomePage() {
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstepn.e6e296f7.svg&w=3840&q=75",
     // "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstripe.ae411f5c.svg&w=3840&q=75",
   ];
-  const listCoin = ["Analytics", "CeFi", "Tokenization", "DeFi", "Oracle"];
+  const listCoin = ["Analytics", "Exchange", "Tokenization", "DeFi", "Oracle"];
   const detailCoinList: IDetailCoin[] = [
     {
       key: "Analytics",
@@ -96,22 +102,25 @@ export function HomePage() {
       colorBanner: "#ede0ff",
     },
     {
-      key: "CeFi",
+      key: "Exchange",
       banner: valenBanner,
       icon: cfiIcon,
       title:
-        "Saola was engaged to develop a crypto exchange module for Valens Pay, a licensed neo banking platform serving North America and EU markets.",
+        "Saola was engaged in developing crypto exchange functionality for Valens Pay, a FINTRAC-registered MSB fintech platform.",
       link: {
         title: "Learn more about Valens Exchange",
         link: "https://valens-exchange.com/tradez",
       },
       disable: false,
       colorBanner: coverValen,
+      styleCoverBanner: {
+        backgroundImage: `url(${coverValen})`,
+      },
       styleBanner: {
         height: "unset",
         width: "unset",
         top: "50%",
-        left: " 29%",
+        left: " 25%",
         background: "white",
         transform: "scale(1.5)",
       },
@@ -127,7 +136,7 @@ export function HomePage() {
       banner: bannerReal,
       icon: realcoin,
       title:
-        "Realcoin is a real estate tokenization platform on Binance Smart Chain, allowing user to invest in fractional real estate to earn yield from qualified projects.",
+        "Realcoin is a real estate tokenization platform on Binance Smart Chain, allowing user to earn yield by investing in fractional real estate projects.",
       link: {
         title: "Learn more about Realcoin",
         link: "https://realcoin-wui.vercel.app/vi",
@@ -143,13 +152,29 @@ export function HomePage() {
     },
     {
       key: "DeFi",
-      banner:
-        "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.970c07cd.jpg&w=3840&q=75",
-      icon: "https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmonkedao.2cc1bea0.svg&w=3840&q=75",
+      banner: alpacaCover,
+      icon: alpaca,
       title:
-        "A decentralized organization made up of NFT holders, MonkeDAO has already started running a validator node to support the Solana network — and has big plans for the future.",
-      link: { title: "Learn more about DAOs on Solana", link: "#" },
-      disable: true,
+        "Alpaca brought crop insurance on-chain with automated claim payment through permissioned smart contract researched and built by Saola.",
+      link: { title: "Learn more about Crop Insurance dApp", link: "#" },
+      disable: false,
+      support: [
+        {
+          link: bitCoin,
+        },
+        {
+          link: sunImage,
+        },
+        {
+          link: sunsunImage,
+        },
+        {
+          link: watter,
+        },
+      ],
+      styleCoverBanner: {
+        backgroundColor: "black",
+      },
     },
     {
       key: "Oracle",
@@ -206,7 +231,7 @@ export function HomePage() {
   const [_detailCoin, setDetailCoin] = useState<IDetailCoin>(detailCoinList[0]);
 
   const solutionRef = useRef<HTMLDivElement>(null);
-  const partnerRef = useRef<HTMLDivElement>(null);
+  const partnerRef = useRef<HTMLHeadingElement>(null);
 
   const projectRef = useRef<HTMLDivElement>(null);
 
@@ -220,10 +245,18 @@ export function HomePage() {
         carerRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       case EVENT_HEADER.PROJECTS:
-        projectRef.current?.scrollIntoView({ behavior: "smooth" });
+        projectRef.current?.scrollIntoView({
+          behavior: "smooth",
+        });
         break;
       case EVENT_HEADER.PARTNER:
-        partnerRef.current?.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          window.scrollBy(
+            0,
+            (partnerRef.current?.getBoundingClientRect().top as number) - 100
+          );
+        }, 1);
+        // window.scroll(0, -1);
         break;
     }
   };
@@ -249,9 +282,9 @@ export function HomePage() {
               <div className="row">
                 <div className="col-md-7 mx-auto">
                   <p className="my-6 text-center">
-                    Saola is a blockchain labs with expertise in DeFi,
-                    Tokenization, Web3 Payment gives organizations an unfair
-                    advantage.
+                    Saola is a blockchain development firm with expertise in
+                    DeFi and Tokenization, providing partners an unfair
+                    advantage
                   </p>
                 </div>
               </div>
@@ -259,13 +292,14 @@ export function HomePage() {
                 <a
                   className="btn-custom-build me-2"
                   target="_blank"
+                  href="https://t.me/buckphan"
                   rel="noopener noreferrer"
                 >
                   Start building
                 </a>
                 <a
                   className="btn-custom-read"
-                  href="http://"
+                  href="https://t.me/buckphan"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -274,7 +308,10 @@ export function HomePage() {
               </div>
             </div>
             <div className="text-center">
-              <h2 className="text-title-two fw-normal mb-6 text-center pb-3">
+              <h2
+                ref={partnerRef}
+                className="text-title-two fw-normal mb-6 text-center pb-3"
+              >
                 TRUSTED BY WORLD-CLASS BLOCKCHAIN FOUNDATIONS, COMPANIES, AND
                 STARTUPS
               </h2>
@@ -432,10 +469,11 @@ export function HomePage() {
                             detail.colorBanner ? detail.colorBanner : "black"
                           }`,
                           backgroundImage: `url${detail.colorBanner}`,
+                          ...detail.styleCoverBanner,
                         }}
                         className="wrap-image"
                       >
-                        {detail.key === "CeFi" && (
+                        {/* {detail.key === "Exchange" && (
                           <img
                             style={{
                               position: "absolute",
@@ -445,7 +483,7 @@ export function HomePage() {
                             }}
                             src={detail.colorBanner}
                           />
-                        )}
+                        )} */}
                         <img
                           style={detail.styleBanner}
                           src={detail.banner}
@@ -490,7 +528,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div ref={partnerRef} className="client-feedback bg-dark py-5">
+        <div className="client-feedback bg-dark py-5">
           <div className="container">
             <h2 className="h4 mb-5">Who&apos;s Building With Saola Labs</h2>
             <div className="wrap">
@@ -553,10 +591,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-        <div
-          ref={carerRef}
-          className="near-footer py-5 position-relative bg-dark"
-        >
+        <div ref={carerRef} className="near-footer py-5 bg-dark">
           <div className="container text-center py-5">
             <div className="w-md-75 mx-auto ">
               {/* <img
@@ -578,8 +613,11 @@ export function HomePage() {
                 accelerate the transition to web3.
               </h2>
               <a
+                style={{
+                  position: "relative",
+                }}
                 className="btn-custom-build me-2"
-                href="http://"
+                href="https://t.me/buckphan"
                 target="_blank"
                 rel="noopener noreferrer"
               >
