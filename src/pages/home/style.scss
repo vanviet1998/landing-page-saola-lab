@@ -213,20 +213,18 @@ $main-color:#E43D40;
             border-radius: 12px;
         }
         .wrap-image{
-            // background-color: #ede0ff;
             position: relative;
             height: 100%;
             min-height: 400px;
             overflow: hidden;
             display: flex;
             img{
-                object-fit: contain !important;
+                // object-fit: contain !important;
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 inset: 0px;
                 color: transparent;
-                object-fit: cover;
             }
         }
         .h4__wrap-image{

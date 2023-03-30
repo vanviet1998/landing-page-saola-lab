@@ -1,11 +1,8 @@
-import { left } from "@popperjs/core";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   alpaca,
   alpacaCover,
-  bannerImage,
   bannerReal,
-  bannerSecond,
   bitCoin,
   bitcoinn,
   brianImage,
@@ -27,14 +24,13 @@ import {
   taro,
   tripple,
   valen,
-  valenBanner,
   vechain,
   watter,
   zReal,
 } from "../../assets";
 import { EVENT_HEADER } from "../../common";
 import { Footer } from "../../components/footer";
-import { HeaderComponent, IHeaderProps } from "../../components/header";
+import { HeaderComponent } from "../../components/header";
 import "./style.scss";
 interface IDetailCoin {
   key: string;
@@ -101,6 +97,7 @@ export function HomePage() {
       ],
       disable: false,
       colorBanner: "#ede0ff",
+      styleBanner: {},
     },
     {
       key: "Exchange",
@@ -118,17 +115,12 @@ export function HomePage() {
         background: "black",
       },
       styleIcon: {
-        background: "white",
-        padding: "10px",
+        // background: "white",
+        // padding: "10px",
       },
-      // styleBanner: {
-      //   height: "unset",
-      //   width: "unset",
-      //   top: "50%",
-      //   left: " 25%",
-      //   background: "white",
-      //   transform: "scale(1.5)",
-      // },
+      styleBanner: {
+        objectFit: "cover",
+      },
       support: [
         { link: qredo },
         { link: ltImage },
@@ -154,6 +146,7 @@ export function HomePage() {
       ],
       disable: false,
       colorBanner: "#243767",
+      styleBanner: {},
     },
     {
       key: "DeFi",
@@ -180,11 +173,8 @@ export function HomePage() {
       styleCoverBanner: {
         backgroundColor: "#19263E",
       },
-      styleIcon: {
-        background: "white",
-        width: "auto",
-        padding: "6px",
-      },
+      styleIcon: {},
+      styleBanner: {},
     },
     {
       key: "Oracle",
